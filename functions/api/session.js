@@ -1,0 +1,1 @@
+import{session,response}from './_auth.js';export async function onRequestGet({request,env}){return response({authenticated:await session(request,env)})}

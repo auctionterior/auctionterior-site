@@ -1,0 +1,1 @@
+import{response,safeOrigin}from './_auth.js';export async function onRequestPost({request}){if(!safeOrigin(request))return response({error:'Origin mismatch'},403);return response({ok:true},200,{'Set-Cookie':'at_session=; HttpOnly; Secure; SameSite=Strict; Path=/api; Max-Age=0'})}
